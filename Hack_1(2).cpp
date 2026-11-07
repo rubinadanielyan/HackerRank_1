@@ -1,22 +1,22 @@
-#include <vector>
-#include <algorithm>
-#include <climits>
-using namespace std;
+// #include <vector>
+// using namespace std;
 
-int hourglassSum(vector<vector<int>> arr) {
-    int best = INT_MIN;
 
-    for (int r = 1; r <= 4; r++) {
-        for (int c = 1; c <= 4; c++) {
-            int sum = arr[r][c];
 
-            for (int d = -1; d <= 1; d++) {
-                sum += arr[r-1][c+d] + arr[r+1][c+d];
-            }
+// vector<int> rotLeft(vector<int> a, int d)
+// {
+//     int n = a.size();
+//     vector<int> result;
 
-            best = max(best, sum);
-        }
-    }
+//     for (int i = 0; i < n; i++)
+//     {
+//         int index = i + d;
 
-    return best;
-}
+//         if (index >= n)
+//             index -= n;
+
+//         result.push_back(a[index]);
+//     }
+
+//     return result;
+// }
